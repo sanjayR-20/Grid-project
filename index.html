@@ -3,75 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Showcasing the greatest knocks of the greatest player on the planet.">
     <title>The King's</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .box {
+            display: grid;
+            grid-template-columns: 170px auto;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            background-color: aqua;
+        }
+
+        .navigation {
+            background-color: rgb(235, 182, 182);
+            font-size: 20px;
+            grid-area: 1 / 1 / 3 / 2;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navigation li {
+            margin: 10px 0;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .navigation a:hover {
+            color: red;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .body {
+            background-color: aliceblue;
+            padding: 20px;
+            border-radius: 5px;
+            color: brown;
+        }
+
+        .footer {
+            background-color: bisque;
+            padding: 15px;
+            border-radius: 5px;
+            color: brown;
+        }
+
+        span {
+            color: black;
+        }
+
+        @media (max-width: 600px) {
+            .box {
+                grid-template-columns: 1fr;
+            }
+
+            .navigation {
+                grid-area: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
-<style>
-    body{
-        background-color: aquamarine;
-        padding: 10px;
-    }
-    .box{
-        display: grid;
-        grid-template-columns: 170px auto;
-        grid-template-rows: max-content auto;
-        background-color: aqua;
-    }
-    .navigation{
-        background-color:rgb(235, 182, 182);
-        font-size: 25px;
-        grid-area: 1/1/3/3;
-        color: crimson;
-    }
-    .body{
-        background-color: aliceblue;
-        padding: 10px;
-        grid-area: 1/2/2/3;
-        color: brown;
-    }
-    .footer{
-        background-color: bisque;
-        grid-area: 2/2/3/3;
-        padding: 10px;
-        color: brown;
-    }
-    li{
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    a{
-        text-decoration: none;
-        color: black;
-    }
-    a:hover{
-        color: red;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        font-weight: bold;
-    }
-    span{
-        color: black;
-    }
-</style>
 <body>
     <div class="box">
-        <div class="navigation">
+        <div class="navigation" role="navigation" aria-label="Main Navigation">
             <ul>
-                <li><a href="./dimensions.png">Stats</a></li>
-                <li><a href="./goal.png">Records</a></li>
-                <li><a href="./solution.html">Video clips</a></li>
+                <li><a href="./dimensions.png" target="_blank" alt="Player Stats">Stats</a></li>
+                <li><a href="./goal.png" target="_blank" alt="Player Records">Records</a></li>
+                <li><a href="./solution.html" target="_blank" alt="Video Clips">Video Clips</a></li>
             </ul>
         </div>
         <div class="body">
             <h1>The King's</h1>
-            <h1>Here we talk about <span>Greatest </span>knocks of the <span>Greatest</span> player on the planet...</h1>
-            <br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus at libero eu euismod. Sed tristique egestas elit, ut rhoncus quam. Duis elementum mi pellentesque, egestas nunc in, interdum libero. Etiam sit amet metus ut orci bibendum placerat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus dolor diam, bibendum eu cursus ut, pharetra quis tortor. Integer ullamcorper tincidunt eros, et mattis magna molestie sit amet. Aliquam lobortis interdum faucibus. Aliquam aliquet accumsan malesuada. Fusce non bibendum leo.
-
-                Sed nec tempor turpis. Etiam odio tellus, maximus nec tortor et, pulvinar sagittis risus. Mauris faucibus accumsan turpis, egestas malesuada libero lacinia ut. Vestibulum molestie nunc sit amet aliquam maximus. In et nunc semper, dictum lorem quis, sagittis massa. Cras dictum ante quis malesuada faucibus.</p>
+            <h2>Here we talk about the <span>Greatest</span> knocks of the <span>Greatest</span> player on the planet...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus at libero eu euismod. Sed tristique egestas elit, ut rhoncus quam. Duis elementum mi pellentesque, egestas nunc in, interdum libero. Etiam sit amet metus ut orci bibendum placerat.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus dolor diam, bibendum eu cursus ut, pharetra quis tortor. Integer ullamcorper tincidunt eros, et mattis magna molestie sit amet.</p>
         </div>
         <div class="footer">
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus at libero eu euismod. Sed tristique egestas elit, ut rhoncus quam. Duis elementum mi pellentesque, egestas nunc in, interdum libero. Etiam sit amet metus ut orci bibendum placerat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus dolor diam, bibendum eu cursus ut, pharetra quis tortor. Integer ullamcorper tincidunt eros, et mattis magna molestie sit amet. Aliquam lobortis interdum faucibus. Aliquam aliquet accumsan malesuada. Fusce non bibendum leo.
-
-                Sed nec tempor turpis. Etiam odio tellus, maximus nec tortor et, pulvinar sagittis risus. Mauris faucibus accumsan turpis, egestas malesuada libero lacinia ut. Vestibulum molestie nunc sit amet aliquam maximus. In et nunc semper, dictum lorem quis, sagittis massa. Cras dictum ante quis malesuada faucibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus at libero eu euismod. Sed tristique egestas elit, ut rhoncus quam. Duis elementum mi pellentesque, egestas nunc in, interdum libero.</p>
+            <p>Sed nec tempor turpis. Etiam odio tellus, maximus nec tortor et, pulvinar sagittis risus. Mauris faucibus accumsan turpis, egestas malesuada libero lacinia ut.</p>
         </div>
     </div>
 </body>
